@@ -1,0 +1,318 @@
+/* we should not use px in media queries */
+/* rem and em do not depends on html font-size in media queries instead , 1rem = 1em = 16px which is default value  ,em is basically the current font-size we use em in media queries as rem has some browser supporting issue   */
+
+/* ***************************
+BELOW 1344px (smaller desktops)
+***************************** */
+
+@media (max-width:84em) {
+    .hero {
+        max-width: 120rem;
+    }
+
+    .heading-primary {
+        font-size: 4.4rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ***************************
+BELOW 1200px (landscape tablets)
+***************************** */
+
+@media (max-width:75em) {
+    html {
+        /* * 9px/16px */
+        font-size: 56.25%;
+    }
+
+    .grid {
+        column-gap: 4.8rem;
+        row-gap: 6.4rem;
+    }
+
+    .heading-secondary {
+        font-size: 3.6rem;
+    }
+
+    .heading-tertiary {
+        font-size: 2.4rem;
+    }
+
+    .heading {
+        padding: 0 3.2rem;
+    }
+
+    .hero {
+        gap: 4.8rem;
+    }
+
+    .main-nav-list {
+        gap: 3.2rem;
+    }
+
+    .testimonials-container {
+        padding: 9.6rem 3.2rem;
+    }
+}
+
+/* ***************************
+BELOW 944px (landscape tablets)
+***************************** */
+
+@media (max-width:59em) {
+    html {
+        /* * 8px/16px */
+        font-size: 50%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 0 8rem;
+        gap: 6.4rem
+    }
+
+    /* as image is also a inline element so text-align:center will center them */
+    .hero-text-box,
+    .hero-img-box {
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 60%;
+    }
+
+    .delivered-meals {
+        justify-content: center;
+        margin-top: 3.2rem;
+    }
+
+    .logos img {
+        height: 2.4rem;
+    }
+
+    .step-number {
+        font-size: 7.4rem;
+    }
+
+    .section-testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .cta {
+        /* if want to 60 to 40 percent 
+        3/5 = 60% + 2/5 = 40%
+        */
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .cta-form {
+        grid-template-columns: 1fr;
+    }
+
+    .btn--form {
+        margin-top: 1.2rem;
+    }
+
+    /* mobile navigation */
+    .btn-mobile-nav {
+        display: block;
+        z-index: 9999;
+    }
+
+    .main-nav {
+        background-color: rgba(255, 255, 255, 0.963);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* give this wholw viewport */
+        height: 100vh;
+
+        /* make it flex container */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in;
+        /* third property of transition is type of the animation if we do not define it will be linear */
+
+        /* default hide navigation */
+        /* display:none NOTE problem with this it that animation will not work transition not works */
+
+        /* 1) Hide it visiually */
+        opacity: 0;
+
+        /* 2) Make it unaccessible to mouse and keyboard because opacity:0 does not remove it from the html flow while display:none remove it from the html flow so if we hit tab it will go on the links of the navigation */
+        pointer-events: none;
+
+        /* 3) Hide it from the screen readers */
+        visibility: hidden;
+
+
+        /*NOTE navigation is done these all will be exta for the sliding in from left  */
+        /* we should transform for the animation not left */
+        transform: translateX(100%);
+
+    }
+
+    /* * trick to make nav visible manually when we click on icon we give a parent class then select it to change it back */
+
+    .nav--open .main-nav {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .nav--open .icon-mobile-nav[name="close-outline"] {
+        display: block;
+    }
+
+    .nav--open .icon-mobile-nav[name="menu-outline"] {
+        display: none;
+    }
+
+    /* chanhe the alignment of list element verticaly */
+
+    .main-nav-list {
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+        font-size: 3rem;
+    }
+
+}
+
+/****************************
+BELOW 704px (landscape tablets)
+******************************/
+
+@media (max-width:44em){
+    .grid--3--cols,
+    .grid--4--cols{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .diets{
+        /* span this column all the way to the end i.e it should start at one all the way to end */
+        grid-column: 1 / -1;
+        /* is to justify (used for horizental alignment) self (because we are using on individual item)  */
+        justify-self: center;
+    }
+
+    .heading-secondary {
+        margin-bottom: 4.8rem;
+    }
+
+    .pricing-plan{
+        width: 100%;
+    }
+
+    /* responsive footer */
+
+    .grid--footer{
+        /* grid-template-columns: repeat(3,1fr); */
+        /* but above will cause problem because below the address and logo col i want to occupy the whole space for that there is only one col left which half will have to share each of them but we grid does not work that way so SOLUTION is declare the grid of 6 col so that above nav-col wil span to two col and the below address and log will span to 3 col */
+        grid-template-columns: repeat(6,1fr);
+    }
+
+    .nav-col{
+        /* to align these nav in row 1 of grid */
+        grid-row: 1;
+        grid-column: span 2;
+        margin-bottom: 3.2rem;
+    }
+
+    .logo-col,
+    .address-col{
+        grid-column: span 3;
+    }
+
+}
+
+/****************************
+BELOW 544px (landscape tablets)
+******************************/
+
+@media (max-width:34em){
+
+    .grid{
+        row-gap: 4.8rem;
+    }
+
+    .grid--2--cols,
+    .grid--3--cols,
+    .grid--4--cols{
+        grid-template-columns: 1fr;
+    }
+
+    .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+}
+
+    .hero {
+        padding: 0 3.2rem;
+    }
+
+    .hero-img{
+        width: 80%;
+    }
+
+    .btn,.btn:link,.btn:visited{
+        padding: 2.4rem 1.6rem;
+    }
+
+    .logos img {
+        height: 1.2rem;
+    }
+/* NOTE this number 2 is actually the order of the child in the container of its parent not the step-img-box it has nothing to do with the class name (in the the container the element we are selecting comes at number two for but for the selector we still need the class name) */
+    .step-img-box:nth-child(2){
+        /* we are manually assigning this element in row 1 */
+grid-row: 1;
+    }
+
+    .step-img-box:nth-child(6){
+grid-row: 5;
+    }
+
+    .step-img-box{
+        /* transform:translate is the way of moving element around without effecting rest of the elements around it*/
+        transform: translateY(2.4rem);
+    }
+
+    .testimonials{
+        grid-template-columns: 1fr; 
+    }
+
+    .gallery{
+        grid-template-columns: repeat(4,1fr);
+        gap: 1.2rem;
+    }
+
+    .cta{
+        grid-template-columns: 1fr;
+    }
+    /* .cta-img-box has no content when we changed to 1fr that is why it disappeared previously it was side by side with form which has many content now we need to give image manual some width */
+
+    .cta-img-box{
+        height: 32rem;
+        grid-row: 1;
+    }
+
+    .cta-text-box{
+        padding:3.2rem;
+    }
+
+
+    
+}

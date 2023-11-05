@@ -1,0 +1,758 @@
+/* @import "../assests/img/eating.jpg"; */
+
+
+
+
+/* *********************** */
+/* Header section */
+/* *********************** */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* We give height here so that in future we can make this header sticky for this we give height */
+    height: 9.6rem;
+    padding: 0 4.8rem;
+    background-color: #fdf2e9;
+
+    /* putting postion:relative because the mobile-nav ovelay is overflowing  */
+    position: relative;
+}
+
+.logo {
+    height: 2.2rem;
+}
+
+
+
+.main-nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+    color: #cf711f;
+}
+
+/* NOTE to make sure this style applies we srlect two class lie this without space if the other class were to be sibling then we give space */
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+    background-color: #e67e22;
+    padding: 1.2rem 2.4rem;
+    border-radius: 9px;
+    color: #fff;
+}
+
+/* mobile navigation */
+
+.btn-mobile-nav{
+    border:none;
+    background: none;
+    cursor: pointer;
+    
+    /* default display none */
+    display: none;
+}
+
+.icon-mobile-nav{
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #333;
+}
+
+/* NOTE we can also select element based on there css */
+.icon-mobile-nav[name="close-outline"]{
+    display: none;
+}
+
+/* STICKY NAVIGATION */
+/* so will apply all thi style to the header if sticky is one of its parent element which will be the body as it will have sticky class we did this all because we were observing section-hero and that is not the child of header section*/
+.sticky .header{
+    position: fixed;
+    /*  this will fix the element into the viewport and will not move as we scroll*/
+    /* when we position element with absolute or fixed they re taken out of the flow therefore it as it does even exist then the rest of the element fill the remaining space*/
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    /* want to give it a fixed height */
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.963);
+    z-index: 999;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+     
+}
+
+.sticky .section-hero{
+    margin-top: 9.6rem;
+    /* because of sticky navigation it was fixed so we need exact margin of it occupying space */
+}
+
+/* *********************** */
+/* Hero section */
+/* *********************** */
+
+.section-hero {
+    background-color: #fdf2e9;
+    /* when we need spacing then we always use padding to preserve the background color */
+    padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+    display: grid;
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    /* background-color: yellow; */
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+    align-items: center;
+}
+
+.hero-img {
+    /* give image width so that it occupies width 100 of its container which is 1fr */
+    width: 100%;
+}
+
+
+.hero-description {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 4.8rem;
+}
+
+/* .hero-text-box{
+    align-self: center;
+} */
+
+
+.delivered-meals {
+    display: flex;
+    margin-top: 8rem;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.delivered-imgs {
+    display: flex;
+    /* align-items: center; */
+}
+
+.delivered-imgs img {
+    height: 4.8rem;
+    width: 4.8rem;
+    /* border-radius: 100%; no need */
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+    margin: 0;
+}
+
+.delivered-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.delivered-text span {
+    color: #cf711f;
+    font-weight: 700;
+}
+
+/* ***************************** */
+/* FEATURED IN SECTION */
+/* ******************************* */
+
+.section-featured {
+    padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .75px;
+    margin-bottom: 2.4rem;
+    text-align: center;
+    color: #888;
+}
+
+.logos {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+}
+
+.logos img {
+    height: 3.2rem;
+    filter: brightness(0);
+    /* or filter takes value from 0 -> 1 or 0 -> 100% */
+    opacity: 0.5;
+    /* or opacity 50% takes value from 0 -> 1 or 0 -> 100% */
+}
+
+/* ***************************** */
+/* HOW OT WORKS SECTION */
+/* ******************************* */
+
+.section-how {
+    padding: 9.6rem 0;
+    /* background-color:#f37507 */
+}
+
+.step-number {
+    font-size: 8.6rem;
+    font-weight: 600;
+    /* #fff white-color -> to-darker #eee -> #ccc -> #bbb -> #999 -> #888 -> #666 -> #555 -> #000 to-black-color */
+    color: #ddd;
+    margin-bottom: 1.6rem;
+}
+
+.step-description {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.step-img-box {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-img {
+    width: 35%;
+}
+
+/* NOTE in html we are not allowed to add child element or pseudo elements to the images */
+
+.step-img-box::before,
+.step-img-box::after {
+    /* pseudo elements need content whether it is empty */
+    content: '';
+    /* for giving some styling display block */
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    /* top: 50%; left: 50%; because the position is calculated from the top left corner. */
+    top: 50%;
+    left: 50%;
+    /* You must pull back the item with the half of its width and height. You can achieve this with transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+    width: 60%;
+    /* NOTE height: 60%; will not work so we will use trick padding-bottom 60% and padding is applied on width so height 0 but padding-bottom 
+    *** 60% of parent width *** */
+    padding-bottom: 60%;
+    background-color: #fdf2e9;
+    z-index: -1;
+}
+
+.step-img-box::after {
+    width: 45%;
+    padding-bottom: 45%;
+    background-color: #fae5d3;
+    z-index: -1;
+}
+
+/* 
+NOTE ARTICLE TO CENTER A ELEMENT
+
+https://medium.com/front-end-weekly/absolute-centering-in-css-ea3a9d0ad72e
+
+codepen.io/jscodelover
+ */
+
+/* ***************************** */
+/* MEALS SECTION */
+/* ******************************* */
+
+.section-meals {
+    padding: 9.6rem 0;
+}
+
+.meal-content {
+    padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal {
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    border-radius: 11px;
+    /* because where is image we are not able to see the border radius */
+    overflow: hidden;
+    /* pading here issue wrap this into another content and give padding there */
+    transition: all 0.3s;
+}
+
+.meal:hover {
+    transform: translateY(-1.2rem);
+    /* negativde we wanted to go up */
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+/* translate takes two values one for horizental movement another vertical movement */
+
+.meal-tags {
+    margin-bottom: 1.2rem;
+    display: flex;
+    gap: 0.4rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 100px;
+    color: #333;
+}
+
+.tag--vegeterian {
+    background-color: #51cf66;
+}
+
+.tag--vegan {
+    background-color: #94d82d;
+}
+
+.tag--paleo {
+    background-color: #ffd43b;
+}
+
+.meal-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.meal-attribute {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.meal-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    color: #e67e22;
+}
+
+.meal-img {
+    /* height: 50%; no need*/
+    width: 100%;
+}
+
+
+.all-recepies {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* ***************************** */
+/* TESTIMONIAL SECTION */
+/* ******************************* */
+
+/* NOTE LINE HEIGHT= FONTSIZE * LINE HEIGHT VALUE */
+.section-testimonials {
+    /* padding: 9.6rem 0; */
+    background-color: #fdf2e9;
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    /* NOTE here it is not necessary to to write 55 or 45 but it is tricj used to treat fr as ppercentage to give one side more width if it was 50 50 then it wiuk be same as 1fr 1fr */
+    align-items: center;
+}
+
+.testimonial-container {
+    padding: 9.6rem;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4.8rem;
+    column-gap: 8rem;
+}
+
+.testimonial-img {
+    width: 6.4rem;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+    font-size: 1.8rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+    font-size: 1.6rem;
+    color: #6f6f6f;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    padding: 1.6rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    /* so that when on hover when we scale image up it shoul not overflow its grid container */
+}
+
+.gallery-item img {
+    display: block;
+    /* making images flexible so we give them a width of 100% */
+    width: 100%;
+    transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* ***************************** */
+/* PRICING SECTION */
+/* ******************************* */
+
+.section-pricing {
+    padding: 9.6rem 0;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 4.8rem;
+}
+
+.pricing-plan {
+    /* background-color: #fdf2e9; */
+    border-radius: 11px;
+    /* padding: 4.8rem; */
+    /* maintaning the consistenct of element because all ave 4.8 padding */
+    width: 75%;
+    /* width 75% because it was too wide itwas block level element so it was occupying the whole space of grid cell */
+}
+
+.pricing-plan--starter {
+    justify-self: end;
+    /* for grid cell we use justify self */
+    border: 2px solid #fdf2e9;
+    padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+    padding: 4.8rem;
+    background-color: #fdf2e9;
+    position: relative;
+    /* use overflow on parent the content which is overflowing on this class is pseudo element :best value */
+    overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+    content: 'best value';
+    position: absolute;
+    /* using %tage here with top because of flexibility and when anything changes it does not effect it */
+    top: 6%;
+    right: -18%;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: #ffd43b;
+    padding: 0.8rem 8rem;
+    color: #333;
+    font-weight: 700;
+    transform: rotate(45deg);
+
+}
+
+.plan-name {
+    color: #cf711f;
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    margin-bottom: 3.2rem;
+}
+
+.plan-price {
+    font-size: 6.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-right: 0.8rem;
+}
+
+.plan-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #6f6f6f;
+}
+
+.plan-sign-up {
+    text-align: center;
+    margin-top: 4.8rem;
+}
+
+.plan-details {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.feature-icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    color: #cf7e22;
+    margin-bottom: 3.2rem;
+    padding: 1.6rem;
+    background-color: #fdf2e9;
+    border-radius: 50%;
+}
+
+.feature-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.6rem;
+}
+
+.feature-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+/* ***************************** */
+/* CTA SECTION */
+/* ******************************* */
+
+.section-cta {
+    /* padding: 9.6rem 0; */
+    /* top/right/bottom/left */
+    padding: 9.6rem 0 12.8rem 0;
+    /* we can ommit the last value
+    top / horizental / left if it is same 
+     */
+    padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+    display: grid;
+    /* 2/3 == 66.6% + 1/3 = 33.3% */
+    grid-template-columns: 2fr 1fr;
+    /* background-color: #e67e22; */
+    /* NOTE the darker the background is the draker should be shadow */
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: 11px;
+    /* gradient: - to define a gradient we use background-image propert it is treated as it was an image
+    background-image: linear-gradient(90deg,red,#e67e22); means 90deg or 180deg or 360deg for the direction flow of gradient.
+
+    linear-gradient(to right,red,#e67e22);
+    or be can write "to right"
+    */
+
+    background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+    overflow: hidden;
+
+}
+
+/* will use a background here because it would we easy to overlay a color on it */
+
+.cta-img-box {
+    /* in the background-image property infact we can define multiple backgrounds which will be layered on top of each other */
+    background-image: linear-gradient(to right bottom, rgba(235, 151, 77, 0.316), rgba(231, 127, 35, 0.302)), url(../assests/img/eating.jpg);
+    background-size: cover;
+    /* means whatever the dimension of the element the background willl always cover it entirely */
+    background-position: center;
+}
+
+.cta-text-box{
+    padding:4.8rem 6.4rem 6.4rem 6.4rem;
+    /* for dark color background we find a  same darker color text to appear on that */
+    color: #45260a;
+}
+
+.cta .heading-secondary{
+    color: #45260a;
+    margin-bottom: 3.2rem;
+}
+
+.cta-text{
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 4.8rem;
+}
+
+.cta-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+/* Styling form with there descent seletor because they all have so many attribute already */
+.cta-form label{
+    /* it is inline so to make it appear in different line set display block */
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.cta-form input,.cta-form select {
+    /* we can give them width of 100% wgich will let them occupy width of there entire parent */
+    width: 100%;
+    
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    /* NOTE they do no inherit the font-family so make them forefully inherit it and they will inherit font stle of there parent element*/
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: #fdf2e9;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+.cta-form input ::placeholder{
+    /* giving placeholder text light color */
+    color: #aaa;
+}
+
+.cta *:focus{
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.574);
+}
+
+/* ***************************** */
+/* FOOTER */
+/* ******************************* */
+
+.footer {
+    padding: 12.8rem 0;
+    border-top: 1px solid #eee;
+}
+
+.grid--footer{
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo{
+    display: block;
+    /* because it is an inline element and to apply box-model attributes display should be block */
+    margin-bottom: 3.2rem;
+}
+
+.social-links{
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+}
+
+.social-icon{
+    height:2.4rem;
+    width: 2.4rem;
+}
+
+.copyright{
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #767676;
+    /* NOTE to bring this copyright paragraph all the way to end of the parent element we use trick by giving parent element display : fles i.e. logo-col then this paragrapg a margin-top:auto this can be done both way vertically and horizentally */
+    margin-top: auto;
+}
+
+.footer-heading{
+    font-size:1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+
+.contacts{
+    /* because default styling is italic */
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.address{
+    margin-bottom: 2.4rem;
+}
+
+.footer-nav{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-link:link,.footer-link:visited{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #767676;
+    transition:all 0.3s;
+}
+
+.footer-link:hover,.footer-link:active{
+    color: #555;
+}
+
+/* 
+@media (max-width:600px){
+    this means that- Is the browser width 600px?
+    if it is 600 px then the written css will be applied 
+    
+    .section-hero{
+        border:20px dashed blue;
+        background-color:blue;
+    }
+}
+
+@media (max-width:1200px){
+    .section-hero{
+        background-color:orangered;
+    }
+    NOTE at the screen width 600 both of the css will be applied of media 600 and media 1200 and if there is conflicting css like this background color then the code which appear last will override that conflicting css
+}
+*/
