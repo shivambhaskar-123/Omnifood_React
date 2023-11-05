@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/Omnifood_React/static/css/main.43d2a995.css",
+    "main.js": "/Omnifood_React/static/js/main.26e74279.js",
+    "static/js/787.277173df.chunk.js": "/Omnifood_React/static/js/787.277173df.chunk.js",
+    "static/media/hero-min.png": "/Omnifood_React/static/media/hero-min.f6b962c8fba2f1b399de.png",
+    "static/media/app-screen-2.png": "/Omnifood_React/static/media/app-screen-2.9f09beff9c1f11573ee5.png",
+    "static/media/app-screen-3.png": "/Omnifood_React/static/media/app-screen-3.8840901f2b4ebc814629.png",
+    "static/media/hero.webp": "/Omnifood_React/static/media/hero.8063f73666b286dee051.webp",
+    "static/media/app-screen-1.png": "/Omnifood_React/static/media/app-screen-1.d60a3c2bea35203a68d7.png",
+    "static/media/gallery-11.jpg": "/Omnifood_React/static/media/gallery-11.2311a566925cddbe5061.jpg",
+    "static/media/eating.jpg": "/Omnifood_React/static/media/eating.fb10ee9ced850d7e76d2.jpg",
+    "static/media/gallery-4.jpg": "/Omnifood_React/static/media/gallery-4.0ef7428835ff66b781c6.jpg",
+    "static/media/gallery-3.jpg": "/Omnifood_React/static/media/gallery-3.706f692c125ff7b53f22.jpg",
+    "static/media/gallery-1.jpg": "/Omnifood_React/static/media/gallery-1.2b7dbbca5ce24c9716d4.jpg",
+    "static/media/gallery-6.jpg": "/Omnifood_React/static/media/gallery-6.bfcbe47e92bea0f02aa0.jpg",
+    "static/media/gallery-12.jpg": "/Omnifood_React/static/media/gallery-12.98ee667ab42ec665d08f.jpg",
+    "static/media/gallery-8.jpg": "/Omnifood_React/static/media/gallery-8.e8796ae491cc9132070a.jpg",
+    "static/media/gallery-2.jpg": "/Omnifood_React/static/media/gallery-2.668e019b194da684a030.jpg",
+    "static/media/meal-1.jpg": "/Omnifood_React/static/media/meal-1.a8e5632d041b7cddc358.jpg",
+    "static/media/gallery-9.jpg": "/Omnifood_React/static/media/gallery-9.adb949fcab996719b02e.jpg",
+    "static/media/meal-2.jpg": "/Omnifood_React/static/media/meal-2.91a8efe0d86e7492e3b9.jpg",
+    "static/media/gallery-5.jpg": "/Omnifood_React/static/media/gallery-5.1b73d621a44a9e919081.jpg",
+    "static/media/gallery-10.jpg": "/Omnifood_React/static/media/gallery-10.aad3a8c062489f620a96.jpg",
+    "static/media/gallery-7.jpg": "/Omnifood_React/static/media/gallery-7.1b7d5b0c0b91f1aabc82.jpg",
+    "static/media/omnifood-logo.png": "/Omnifood_React/static/media/omnifood-logo.b3303bb60c5a0707b370.png",
+    "static/media/the-new-york-times.png": "/Omnifood_React/static/media/the-new-york-times.fedc85b26c424d2e167d.png",
+    "static/media/forbes.png": "/Omnifood_React/static/media/forbes.198688dbb86c3613e074.png",
+    "static/media/usa-today.png": "/Omnifood_React/static/media/usa-today.1c078f39a4c0bf2d9a2b.png",
+    "static/media/steve.jpg": "/Omnifood_React/static/media/steve.0c8a0e48c501c7db3624.jpg",
+    "static/media/apple-touch-icon.png": "/Omnifood_React/static/media/apple-touch-icon.7212bc2875102bc6aaf4.png",
+    "static/media/business-insider.png": "/Omnifood_React/static/media/business-insider.f600197cea7efc0c5c66.png",
+    "static/media/techcrunch.png": "/Omnifood_React/static/media/techcrunch.4d966bb9916d89bcae9c.png",
+    "index.html": "/Omnifood_React/index.html",
+    "main.43d2a995.css.map": "/Omnifood_React/static/css/main.43d2a995.css.map",
+    "main.26e74279.js.map": "/Omnifood_React/static/js/main.26e74279.js.map",
+    "787.277173df.chunk.js.map": "/Omnifood_React/static/js/787.277173df.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43d2a995.css",
+    "static/js/main.26e74279.js"
+  ]
+}
